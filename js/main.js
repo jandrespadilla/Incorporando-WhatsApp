@@ -4,9 +4,9 @@
     // Muy importante tomar bien el id, y usar bien las variables para que no genere error.
     // + "%0a" +           -> Salto de línea
     // + "%0a%0a" +        -> Doble salto de línea
-
+    
     form__contacto.onsubmit = enviarWhatsapp;
-
+    let numeroHost = 'nnnnnnnnnnn';
     function enviarWhatsapp() {
 
         const name = document.getElementById("name").value;
@@ -23,7 +23,7 @@
             check = "No "
         }
 
-        const url = "https://api.whatsapp.com/send?phone=+543517054804&text=" +
+        const url = "https://api.whatsapp.com/send?phone=" + numeroHost + "&text=" +
             "¡Hola!" + "%0a%0a" +
             "Mi nombre es: " + name + "%0a" +
             "Teléfono: " + phone + "%0a" +
